@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            color: #555555;
+        }
+
+        body {
+            background-image: url("img/bg.jpg");
+            background-size: 100%;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-family: arial;
+        }
+
+        #container{
+            margin: 100px 0 0 0;
+
+        }
+
+        h1{
+            font-size: 50px;
+            color: #000000;
+        }
+
+        h2{
+            font-size: 35px;
+            color: #000000;
+
+        }
+
+        #inputform {
+            margin: 25px 0 0 0;
+        }
+
+        #inputform input, #inputform #radiobuttons{
+            margin: 4px 1px 15px 1px;
+            font-size: 17px;
+            color: #000000;
+            text-align: center;
+        }
+
+         #inputform #radiobuttons{
+            margin: 4px 1px 5px 1px;
+        }
+
+        .datepicker{
+            width: 100px;
+        }
+
+        .timepicker{
+            width: 75px;
+        }
+
+        #submit{
+            padding: 3px 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>WhatsHappening</title>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery-1.10.2.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="timepicker.js"></script>
+    <link rel="stylesheet" href="jquery_timepicker.css">
+    <script>
+        $(function() {
+            $( ".datepicker" ).datepicker();
+            $('.timepicker').timepicker();
+        });
+    </script>
+    <link rel="stylesheet" href="jquery-ui.css">
+</head>
+<body>
+    <div id="container">
+        <h1>WhatsHapping</h1>
+        <h2>A search engine for all good in life</h2>
+        <form action="" method="POST" id="inputform">
+            What do you want to do? <br />
+            <input type="text" name="what"><br />
+            Where are you?<br />
+            <input type="text" name="where"><br />
+            From/when do you have time?<br />
+            <input type="text" name="date_from" class="datepicker"><input type="text" name="time_from" class="timepicker"> - <input type="text" name="date_till" class="datepicker"><input type="text" name="time_till" class="timepicker"><br />
+            Do you want to meet new people?<br />
+            <div id="radiobuttons">
+                <input type="radio" name="newpeople" value="y">Yes <input type="radio" name="newpeople" value="n"> No<br />
+            </div>
+            <input type="submit" name="submit" value="Go!" id="submit">
+        </form>
+    </div>
+
+</body>
+</html>
