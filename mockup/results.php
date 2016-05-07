@@ -33,6 +33,9 @@
 <div id="container">
     <img src="img/logo.png" alt="WhatsHappening: A search engine for all good in life" />
     <div id="results">
+        <?php
+            print_r($_POST);
+        ?>
         <div class="result" onmouseover="this.style.background='#ffffff';" onmouseout="this.style.background='transparent';">
             <div class="spacing"></div>
             <img src="img/event1.jpg" align="left" alt="" class="eventImg">
