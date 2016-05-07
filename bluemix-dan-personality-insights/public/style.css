@@ -128,9 +128,8 @@ input::-moz-focus-inner {
     }
 
     .result .info{
-        float: right;
         margin: 0 10px 0 0;
-        color: #000000;
+        color: #555555;
     }
 
     .result .about{

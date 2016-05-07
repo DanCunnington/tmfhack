@@ -34,17 +34,37 @@ $(document).ready(function() {
         }
 
         $.post('/findEvents', eventQuery, function(events) {
-            var newEntry;
-            for(var i = 0; i < events.length; i++){
-                if(i == events.length - 1){
-                    newEntry = '<div class="result last" onmouseover="this.style.background=\'#ffffff\';" onmouseout="this.style.background=\'transparent\';">';
-                }else{
-                    newEntry = '<div class="result" onmouseover="this.style.background=\'#ffffff\';" onmouseout="this.style.background=\'transparent\';">';
+            if(events.length == 0){
+                $("#results").append("No results found.");
+            }else{
+                var newEntry;
+                for(var i = 0; i < events.length; i++){
+                    if(i == events.length - 1){
+                        newEntry = '<div class="result last" onmouseover="this.style.background=\'#ffffff\';" onmouseout="this.style.background=\'transparent\';">';
+                    }else{
+                        newEntry = '<div class="result" onmouseover="this.style.background=\'#ffffff\';" onmouseout="this.style.background=\'transparent\';">';
+                    }
+                    newEntry = newEntry  + '<span class="title">' + events[i].name + '</span>';
+                    var info;
+                    if(events[i].characteristics[0].versions[0].value){
+                        info = events[i].characteristics[0].versions[0].value.replace("T", " at ").replace(":0.000Z","").replace(":00.000Z","");
+                    }
+                    if(events[i].characteristics[2].versions[0].value){
+                        if(info.length > 0){
+                            info = info + "<br>";
+                        }
+                        info = info + events[i].characteristics[2].versions[0].value;
+                    }
+                    newEntry = newEntry + "<div class='info'>" + info + '</div>';
+                    /*
+                     var dateTime = events[i].characteristics[0].versions[0].value;
+                     dateTime = dateTime.replace("T"," at ");
+                     newEntry = newEntry + dateTime + '<br>';
+                     */
+                    newEntry = newEntry  + '</div>';
+                    $("#results").append(newEntry);
+                    console.log(events[i]);
                 }
-                newEntry = newEntry  + '<span class="title">' + events[i].name + '</span>';
-                newEntry = newEntry  + '</div>';
-                $("#results").append(newEntry);
-                console.log(events[i]);
             }
             stepForward(3);
         });
