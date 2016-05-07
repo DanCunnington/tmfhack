@@ -39,11 +39,11 @@ $(document).ready(function() {
             }else{
                 var newEntry;
                 for(var i = 0; i < events.length; i++){
-                    if(i == events.length - 1){
+                    /*if(i == events.length - 1){
                         newEntry = '<div class="result last" onmouseover="this.style.background=\'#ffffff\';" onmouseout="this.style.background=\'transparent\';">';
-                    }else{
+                    }else{*/
                         newEntry = '<div class="result" onmouseover="this.style.background=\'#ffffff\';" onmouseout="this.style.background=\'transparent\';">';
-                    }
+                    //
                     newEntry = newEntry  + '<span class="title">' + events[i].name + '</span>';
                     var info;
                     if(events[i].characteristics[0].versions[0].value){
