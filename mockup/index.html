@@ -14,6 +14,16 @@
             $( ".datepicker" ).datepicker();
             $('.timepicker').timepicker();
         });
+
+        $(document).ready(function() {
+            $(".radio").change(function () {
+                if ($("#radioyes").is(':checked')) {
+                    $("#twitter").show();
+                } else {
+                    $("#twitter").hide();
+                }
+            });
+        });
     </script>
     <link rel="stylesheet" href="jquery-ui.css">
 </head>
@@ -29,7 +39,11 @@
             <input type="text" name="date_from" class="datepicker"><input type="text" name="time_from" class="timepicker"> - <input type="text" name="date_till" class="datepicker"><input type="text" name="time_till" class="timepicker"><br />
             Do you want to meet new people?<br />
             <div id="radiobuttons">
-                <input type="radio" name="newpeople" value="y">Yes <input type="radio" name="newpeople" value="n"> No<br />
+                <input type="radio" id="radioyes" class="radio" name="newpeople" value="y">Yes <input type="radio" id="radiono" class="radio" name="newpeople" value="n"> No<br />
+            </div>
+            <div id="twitter">
+            What's your twitter handle?<br />
+            <input type="text" name="twitter"><br />
             </div>
             <input type="submit" name="submit" value="Go!" id="submit">
         </form>

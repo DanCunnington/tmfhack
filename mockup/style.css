@@ -106,3 +106,7 @@ h2{
 .last{
     border: none;
 }
+
+#twitter {
+    display: none;
+}

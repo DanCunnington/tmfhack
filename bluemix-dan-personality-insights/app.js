@@ -7,6 +7,10 @@
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
+var http = require('http');
+var https = require('https');
+var bodyParser = require('body-parser');
+var request = require('request');
 
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
@@ -14,6 +18,8 @@ var cfenv = require('cfenv');
 
 // create a new express server
 var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
@@ -95,15 +101,19 @@ app.get('/matchUser/:twitterhandle', function(req,res,next) {
                 if (opennessSimilar && conscientiousnessSimilar && extraversionSimilar && aggreablenessSimilar && emotionalrangeSimilar) {
                     matches.push(users[i]);
                 }
+                console.log("---------");
             }
-            res.json({matches: matches});
+            res.json({user: user, matches: matches});
         });
     });
 });
 
 function checkSimilar(newVal,userVal) {
     var diff = newVal - userVal;
-    if (diff <= 0.1 || diff >= -0.1) {
+    console.log(diff);
+    if (diff < 0 && diff >= -0.25) {
+        return true;
+    } else if (diff >= 0 && diff <= 0.25) {
         return true;
     } else {
         return false;
@@ -169,3 +179,61 @@ app.get('/addUser/:twitterhandle', function(req,res,next) {
     });
 });
 
+app.post('/findEvents', function(req,res,next) {
+    var what = req.body.what;
+    var where = req.body.where;
+    var date_from = req.body.date_from;
+    var time_from = req.body.time_from;
+    var date_till = req.body.date_till;
+    var time_till = req.body.time_till;
+
+    console.log(what);
+    console.log(where);
+    console.log(date_from);
+    console.log(time_from);
+    console.log(date_till);
+    console.log(time_till);
+
+
+    //Get list of events from TMForum API
+    var options = {
+      url: 'http://192.176.47.48:27030/rest/CatalogManagement/v2/productSpecification/?project=happening',
+      headers: {
+        'Authorization': 'Basic OTMwMDY2MWRmMDBmZTlmZmVkMzM0ZjBkYTQyMDIwMWE5NmRhMzgyZjE5ZDYyM2EzODE6M2ZPRHI4UkRXOWsxZDAxRTlhaUYwWldnNXh4dDlsVXVvR243NE1FbHgwUTZjMkpzTjA='
+      }
+    };
+
+    request(options, function(error,response,body) {
+        if (!error && response.statusCode == 200) {
+            var products = JSON.parse(body);
+
+            //For each product, pull out version and add to versions array
+            var events = [];
+
+            for (var i=0; i<products.length; i++) {
+
+                //filter out those within start and end date, location, times
+                var eventDetails = products[i].versions[0];
+                var startDateMatch = false;
+                var startTimeMatch = false;
+                var endDateMatch = false;
+                var endTimeMatch = false;
+               
+                //Check location
+                var eventCity = eventDetails.characteristics[5].versions[0].value;
+                var locationMatch = (eventCity.toLowerCase() == where.toLowerCase());
+                
+
+                
+
+
+                events.push(products[i].versions[0]);
+
+            }
+
+            res.json(events);
+        } else {
+            console.log(response.statusCode);
+        }
+    });
+});
