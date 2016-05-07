@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WhatsHappening</title>
+
+		<meta name="description" content="WhatsHappening">
+		<meta name="author" content="Sander Breukink">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+        <script src="js/acm.js"></script>
+        <style type="text/css">
+            .reveal section img{
+                border: none;
+            }
+        </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<img src="images/logo.png" alt="WhatsHappening" style="width: 150%; border:none; box-shadow:none;">
+					<p>
+						<small>By Sander Breukink, Dan Cunnington and Fabian Eitel</small>
+					</p>
+				</section>
+				<section>
+					Combines data from several APIs into one:
+					<div style="position:relative; height: 556px;">
+						<p class="fragment current-visible" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;"><img src="images/apis1.png" alt="" style="background: none; box-shadow: none; width: 876px; height: 556px"/></p>
+                        <p class="fragment current-visible" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;"><img src="images/apis2.png" alt="" style="background: none; box-shadow: none; width: 876px; height: 556px"/></p>
+                        <p class="fragment current-visible" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;"><img src="images/apis3.png" alt="" style="background: none; box-shadow: none; width: 876px; height: 556px"/></p>
+
+                	</div>
+                </section>
+                <section>
+                    Combines data from several APIs into one:
+                    <div style="position:relative; height: 487px;">
+                        <p class="fragment current-visible" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;"><img src="images/outputs1.png" alt="" style="background: none; box-shadow: none; width: 876px; height: 487px"/></p>
+                        <p class="fragment current-visible" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;"><img src="images/outputs2.png" alt="" style="background: none; box-shadow: none; width: 876px; height: 487px"/></p>
+                        <p class="fragment current-visible" style="position:absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;"><img src="images/outputs3.png" alt="" style="background: none; box-shadow: none; width: 876px; height: 487px"/></p>
+
+                    </div>
+                </section>
+
+				<section >
+					<h1>Live demo</h1>
+                    <a href="http://hlddrole.nl/whatshappening/" target="_blank">http://hlddrole.nl/whatshappening/</a>
+                </section>
+                <section >
+                    <h1>Questions?</h1>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
