@@ -10,10 +10,22 @@
     <script src="timepicker.js"></script>
     <link rel="stylesheet" href="jquery_timepicker.css">
     <script>
+        function stepForward(curStep) {
+            $("#step" + curStep).slideUp();
+            curStep = curStep + 1
+            $("#step" + curStep).slideDown();
+        }
+        function stepBack(curStep) {
+            $("#step" + curStep).slideUp();
+            curStep = curStep - 1
+            $("#step" + curStep).slideDown();
+        }
+
         $(function() {
             $( ".datepicker" ).datepicker();
             $('.timepicker').timepicker();
         });
+
     </script>
     <link rel="stylesheet" href="jquery-ui.css">
 </head>
@@ -21,17 +33,45 @@
     <div id="container">
         <img src="img/logo.png" alt="WhatsHappening: A search engine for all good in life" />
         <form action="results.html" method="POST" id="inputform">
-            What do you want to do? <br />
-            <input type="text" name="what"><br />
-            Where are you?<br />
-            <input type="text" name="where"><br />
-            From/when do you have time?<br />
-            <input type="text" name="date_from" class="datepicker"><input type="text" name="time_from" class="timepicker"> - <input type="text" name="date_till" class="datepicker"><input type="text" name="time_till" class="timepicker"><br />
-            Do you want to meet new people?<br />
-            <div id="radiobuttons">
-                <input type="radio" name="newpeople" value="y">Yes <input type="radio" name="newpeople" value="n"> No<br />
+            <div id="step1">
+                <span class="stepTitle">Step 1/3: What do you want to do?</span><br>
+                Enter keywords:<br>
+                <input type="text" name="keywords"> <input type="button" name="step2" value="Next step" onclick="stepForward(1)">
+                <div class="orline">or</div>
+                Let us base suggestions on your Facebook profile:<br>
+                <img src="img/facebook-connect.png" class="button-social" alt="Facebook connect" />
+                <div class="orline">or</div>
+                Let us base suggestions on your Twitter profile:<br>
+                <img src="img/twitter-connect.png" class="button-social" alt="Twitter connect" />
+                <div class="orline">or</div>
+                <input type="button" name="step2" value="I want to see everything!" onclick="stepForward(1)"><br>
+
             </div>
-            <input type="submit" name="submit" value="Go!" id="submit">
+            <div id="step2" style="display: none">
+                <span class="stepTitle">Step 2/3: What do you want to do?</span><br>
+                Enter you location and maximum radius:<br>
+                <input type="text" name="location">
+                <select name="radius">
+                    <option value="5">5 km</option>
+                    <option value="10">10 km</option>
+                    <option value="50">50 km</option>
+                    <option value="100">100 km</option>
+                    <option value="250">250 km</option>
+                </select> <br>
+                <input type="button" name="step3" value="Submit location" onclick="stepForward(2)"><br>
+                <br>
+                <input type="button" name="step2" value="Previous step" onclick="stepBack(2)" class="prevStep"><br>
+            </div>
+            <div id="step3" style="display: none">
+                <span class="stepTitle">Step 3/3: From/to when?</span><br>
+                State the date and time from/to which you are looking for activities:<br>
+                <input type="text" name="date_from" class="datepicker"><input type="text" name="time_from" class="timepicker"> - <input type="text" name="date_till" class="datepicker"><input type="text" name="time_till" class="timepicker"><br />
+                <br>
+                <input type="submit" name="submit" value="Go!" id="submit"><br>
+                <br>
+                <input type="button" name="step2" value="Previous step" onclick="stepBack(3)" class="prevStep"><br>
+            </div>
+            <!-- step 4: do you want to meet new people? Y/N -->
         </form>
     </div>
 
