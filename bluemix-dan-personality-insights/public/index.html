@@ -12,6 +12,14 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="jquery_timepicker.css">
     <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- facebook api connection -->
     <script>
         window.fbAsyncInit = function() {
@@ -64,6 +72,11 @@
                     $("#twitter").hide();
                 }
             });
+
+             
+
+    
+
         });
     </script>
     <!-- fix submit -->
@@ -78,6 +91,7 @@
 </head>
 <body>
     <div id="container">
+
         <img src="img/logo.png" alt="WhatsHappening: A search engine for all good in life" />
         <form id="inputform">
             <div id="step1">
@@ -124,11 +138,32 @@
                 <br>
                 <input type="button" name="step2" value="Previous step" onclick="stepBack(3)" class="prevStep"><br>
             </div>
-            <div id="step4" style="display: none">
-                <div id="results"></div>
-            </div>
+            
             <!-- step 4: do you want to meet new people? Y/N -->
         </form>
+    </div>
+    <div class="final-results">
+        <div class="row height">
+
+            <div class="col-sm-4">
+                
+                <img src="img/logo.png" class="results-logo" alt="WhatsHappening: A search engine for all good in life" />
+                <h4>Events</h4>
+                <div id="results"></div>
+
+                <div class="users-container">
+                    <h4>Someone to hang out with?</h4>
+                    <p>The following people are interested in these events and have similar personalities</p>
+                    <div class="users"></div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-8 height">
+                <div id="map"></div>
+            </div>
+
+        </div>
     </div>
 </body>
 </html>
