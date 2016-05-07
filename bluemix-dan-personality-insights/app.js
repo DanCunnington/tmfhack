@@ -1,0 +1,171 @@
+/*eslint-env node*/
+
+//------------------------------------------------------------------------------
+// node.js starter application for Bluemix
+//------------------------------------------------------------------------------
+
+// This application uses express as its web server
+// for more info, see: http://expressjs.com
+var express = require('express');
+
+// cfenv provides access to your Cloud Foundry environment
+// for more info, see: https://www.npmjs.com/package/cfenv
+var cfenv = require('cfenv');
+
+// create a new express server
+var app = express();
+
+// serve the files out of ./public as our main files
+app.use(express.static(__dirname + '/public'));
+
+// get the app environment from Cloud Foundry
+var appEnv = cfenv.getAppEnv();
+
+// start server on the specified port and binding host
+app.listen(appEnv.port, '0.0.0.0', function() {
+  // print a message when the server starts listening
+  console.log("server starting on " + appEnv.url);
+});
+
+
+var db = require('./utils/db.js');
+var twit = require('twit');
+
+var Twit = require('twit')
+ 
+var T = new Twit({
+  consumer_key:         'vXCmJGFoA6FrNmj1dAJ2skWaq',
+  consumer_secret:      'ag3N20zlUIzohO3IGnl3K9IygdKUetMS4lMTuNVXN59FwcaCl4',
+  access_token:         '26059862-9A8iYJ68EXvxgr02sa6AkSJUvIb80eGGOM3krurVs',
+  access_token_secret:  'MsrAHb6bMVUfOfzSA3b4rxjDFlhNZ20WnAd9RpCLBhx9K'
+})
+ 
+var watson = require('watson-developer-cloud');
+
+var personality_insights = watson.personality_insights({
+username: '397446ac-5b6e-4343-89d6-b366ed7ceb2e',
+password: 'sS6GAnNpLDNZ',
+version: 'v2'
+});
+
+
+
+//For the twitter user - use judges
+//Search database for people with similar personalities
+app.get('/matchUser/:twitterhandle', function(req,res,next) {
+
+    var twitterhandle = req.params.twitterhandle;
+
+    //Extract user from database with this twitter handle
+    db.viewUser(twitterhandle, function(err,docs) {
+
+        if (err) {
+            console.log(err);
+        }
+        var user = docs[0];
+        var openness = user.openness;
+        var conscientiousness = user.conscientiousness;
+        var extraversion = user.extraversion;
+        var aggreableness = user.aggreableness;
+        var emotionalrange = user.emotionalrange;
+
+        //Compare values against all other users
+        db.findUsersOtherThan(twitterhandle, function(err,users) {
+            if (err) {
+                console.log(err);
+            }
+
+            var matches = [];
+
+            //For each user, compare similarity scores
+            for (var i=0; i<users.length; i++) {
+                var useropenness = users[i].openness;
+                var userconscientiousness = users[i].conscientiousness;
+                var userextraversion = users[i].extraversion;
+                var useraggreableness = users[i].aggreableness;
+                var useremotionalrange = users[i].emotionalrange;
+
+
+                //Similar if within .1
+                var opennessSimilar = checkSimilar(openness,useropenness);
+                var conscientiousnessSimilar = checkSimilar(conscientiousness,userconscientiousness);
+                var extraversionSimilar = checkSimilar(extraversion,userextraversion);
+                var aggreablenessSimilar = checkSimilar(aggreableness,useraggreableness);
+                var emotionalrangeSimilar = checkSimilar(emotionalrange,useremotionalrange);
+                if (opennessSimilar && conscientiousnessSimilar && extraversionSimilar && aggreablenessSimilar && emotionalrangeSimilar) {
+                    matches.push(users[i]);
+                }
+            }
+            res.json({matches: matches});
+        });
+    });
+});
+
+function checkSimilar(newVal,userVal) {
+    var diff = newVal - userVal;
+    if (diff <= 0.1 || diff >= -0.1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//save user to database
+app.get('/addUser/:twitterhandle', function(req,res,next) {
+
+    var twitterhandle = req.params.twitterhandle;
+
+    //Add if not exists
+    var exists = false;
+    db.viewUsers(function(users) {
+        for (var i=0; i<users.length; i++) {
+            if (users[i].twitterhandle == twitterhandle) {
+                exists = true;
+                break;
+            }
+        }
+        //Get tweets
+        if (!exists) {
+            T.get('statuses/user_timeline', { screen_name: twitterhandle, count: 200 }, function(err, data, response) {
+                var queryString = "";
+                //Extract tweets
+                for (var i=0; i<data.length; i++) {
+                    queryString += data[i].text;
+                }
+         
+                //Get personality
+                personality_insights.profile({ text: queryString }, function (err, profile) {
+                    if (err) {
+                        return res.json({"err": err.error});
+                    } else {
+
+                        //Extract personality and store 5 highest scores
+                        var categories = profile.tree.children;
+                        var personalities;
+                        for (var i=0; i<categories.length; i++) {
+                            if (categories[i].id == "personality") {
+                                personalities = categories[i].children;
+                            }
+                        }
+                        var big5 = personalities[0].children;
+                        var user = {
+                            twitterhandle: twitterhandle
+                        }
+                        for (var i=0; i<big5.length; i++) {
+                            //Get name
+                            var name = big5[i].name;
+                            user[name.replace(/\s+/g, '')] = big5[i].percentage;
+                        }
+
+                        db.addUser(user, function() {
+                             res.json({user: user});
+                        });
+                    }
+                });
+            });
+        } else {
+            res.json({"status": "exists"});
+        }
+    });
+});
+
