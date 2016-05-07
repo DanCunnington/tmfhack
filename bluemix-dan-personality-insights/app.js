@@ -56,7 +56,7 @@ version: 'v2'
 });
 
 var foursquare = (require('foursquarevenues'))('FGM13COQ3FT2QGX14IU0U0SQKMKY3XE11IR31NCF0PVQ4SVR', 'C0ATHFNKGKIWF1L0WFEJXOQ5NOE0E3OGDP1BRIH3GGXFFF3Z');
-
+var Nbrite = require('nbrite');
 
 //For the twitter user - use judges
 //Search database for people with similar personalities
@@ -325,3 +325,57 @@ app.get('/restaurants/:lat/:lng', function(req,res,next) {
     });
 
 });
+
+// Load Eventbrite
+var nbrite = new Nbrite({token:'VNUBXCVG4NUMQNLYSQII'});
+
+app.get('/eventbrite/:location', function(req,res,next) {
+    var location = req.params.location;
+    
+    nbrite.get('/events/search/', { 'venue.city': location }, function (err, data) {
+        if(err){
+            return console.error(err);
+        }
+        console.log('Received');
+    
+        var events = data.events;
+
+        var returnArray = [];
+
+        for (var i=0; i<events.length; i++) {
+            //get venues
+            (function(iteration) {
+                nbrite.venues(events[iteration].venue_id).info(function (err, body) {
+                    if(err){
+                        return console.error(err);
+                    }
+
+                    var event = events[iteration];                    
+                    var nameID = event.name.text;
+                    if(nameID){
+                        nameID = nameID.replace(/[^\w\s]/gi, '');
+                    }
+                    if(nameID && nameID.length > 18){
+                        nameID = nameID.substring(0, 18);
+                    }
+
+                    var venue = body;
+                    returnArray.push({name: nameID, venue: venue, eventDetails: events[iteration]});
+
+                    if (iteration == events.length -1) {
+                        res.json(returnArray);
+                    }
+
+                });
+
+            })(i);
+        }
+    });
+});
+
+  
+
+// helper
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}

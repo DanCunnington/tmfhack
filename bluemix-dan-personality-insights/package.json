@@ -11,6 +11,7 @@
     "express": "4.13.x",
     "foursquarevenues": "^2.0.0",
     "mongoose": "^4.4.15",
+    "nbrite": "^0.2.0",
     "request": "^2.72.0",
     "twit": "^2.2.4",
     "watson-developer-cloud": "^1.4.1"

@@ -33,11 +33,56 @@ $(document).ready(function() {
             twitterhandle: twitterhandle
         }
 
-        $.post('/findEvents', eventQuery, function(events) {
-            if(events.length == 0){
+        //$.post('/findEvents', eventQuery, function(events) {
+            // if(events.length == 0){
+            //     $("#results").append("No results found.");
+            // }else{
+            //     var newEntry;
+            //     for(var i = 0; i < events.length; i++){
+            //         /*if(i == events.length - 1){
+            //             newEntry = '<div class="result last" onmouseover="this.style.background=\'#ffffff\';" onmouseout="this.style.background=\'transparent\';">';
+            //         }else{*/
+            //             newEntry = '<div class="result" onmouseover="this.style.background=\'#ffffff\';" onmouseout="this.style.background=\'transparent\';">';
+            //         //
+            //         newEntry = newEntry  + '<span class="title">' + events[i].name + '</span>';
+            //         var info;
+            //         if(events[i].characteristics[0].versions[0].value){
+            //             info = events[i].characteristics[0].versions[0].value.replace("T", " at ").replace(":0.000Z","").replace(":00.000Z","");
+            //         }
+            //         if(events[i].characteristics[2].versions[0].value){
+            //             if(info.length > 0){
+            //                 info = info + "<br>";
+            //             }
+            //             info = info + events[i].characteristics[2].versions[0].value;
+            //         }
+            //         newEntry = newEntry + "<div class='info'>" + info + '</div>';
+            //         /*
+            //          var dateTime = events[i].characteristics[0].versions[0].value;
+            //          dateTime = dateTime.replace("T"," at ");
+            //          newEntry = newEntry + dateTime + '<br>';
+            //          */
+            //         newEntry = newEntry  + '</div>';
+            //         $("#results").append(newEntry);
+            //         console.log(events[i]);
+            //     }
+            // }
+        $.get('/eventbrite/'+where, function(events) {
+
+            if (events.length == 0) {
                 $("#results").append("No results found.");
-            }else{
+            } else {
+
+                 $("#container").hide();
+                $(".final-results").show();
+
+                var map = L.map('map').setView([43.710100, 7.261997], 13);
+
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
                 var newEntry;
+                
                 for(var i = 0; i < events.length; i++){
                     /*if(i == events.length - 1){
                         newEntry = '<div class="result last" onmouseover="this.style.background=\'#ffffff\';" onmouseout="this.style.background=\'transparent\';">';
@@ -46,14 +91,14 @@ $(document).ready(function() {
                     //
                     newEntry = newEntry  + '<span class="title">' + events[i].name + '</span>';
                     var info;
-                    if(events[i].characteristics[0].versions[0].value){
-                        info = events[i].characteristics[0].versions[0].value.replace("T", " at ").replace(":0.000Z","").replace(":00.000Z","");
+                    if(events[i].eventDetails.start.local){
+                        info = events[i].eventDetails.start.local.replace("T", " at ").replace(":0.000Z","").replace(":00.000Z","");
                     }
-                    if(events[i].characteristics[2].versions[0].value){
+                    if(events[i].eventDetails.capacity){
                         if(info.length > 0){
                             info = info + "<br>";
                         }
-                        info = info + events[i].characteristics[2].versions[0].value;
+                        info = info + events[i].eventDetails.capacity;
                     }
                     newEntry = newEntry + "<div class='info'>" + info + '</div>';
                     /*
@@ -63,42 +108,38 @@ $(document).ready(function() {
                      */
                     newEntry = newEntry  + '</div>';
                     $("#results").append(newEntry);
+
+                    //Plot lat lng of venue on map
+                    L.marker([events[i].venue.latitude,events[i].venue.longitude]).bindPopup(events[i].name).addTo(map);
                     console.log(events[i]);
                 }
-            }
-            stepForward(3);
-
-            $("#container").hide();
-            $(".final-results").show();
-
-            var map = L.map('map').setView([43.710100, 7.261997], 13);
-
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
 
 
-            //Plot lat lng of venue on map
+                stepForward(3);
 
-
-
-            var RestaurantIcon = L.Icon.Default.extend({
-                options: {
-                    iconUrl: 'marker-icon-restaurant.png' 
-                }
-            });
-            //Ads for nearby restaurants
-            //Pass in lat lng of first venue
-            $.get('/restaurants/43.710100/7.261997', function(restaurants) {
                
-                for (var i=0; i<restaurants.length; i++) {
-                    var restaurantIcon = new RestaurantIcon();
-                    var text = "2 for 1 on all evening meals - "+restaurants[i].name;
-                    L.marker([restaurants[i].lat,restaurants[i].lng],{icon: restaurantIcon}).bindPopup(text).addTo(map);
-                }
-                
-            });
-            
+
+
+
+
+                var RestaurantIcon = L.Icon.Default.extend({
+                    options: {
+                        iconUrl: 'marker-icon-restaurant.png' 
+                    }
+                });
+                //Ads for nearby restaurants
+                //Pass in lat lng of first venue
+                $.get('/restaurants/43.710100/7.261997', function(restaurants) {
+                   
+                    for (var i=0; i<restaurants.length; i++) {
+                        var restaurantIcon = new RestaurantIcon();
+                        var text = "2 for 1 on all evening meals - "+restaurants[i].name;
+                        L.marker([restaurants[i].lat,restaurants[i].lng],{icon: restaurantIcon}).bindPopup(text).addTo(map);
+                    }
+                    
+                });
+
+            }            
         });
 
         //get personality insights also
