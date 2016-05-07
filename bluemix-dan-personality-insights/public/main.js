@@ -67,13 +67,28 @@ $(document).ready(function() {
                 }
             }
             stepForward(3);
+
+            $("#container").hide();
+            $(".final-results").show();
+
+            var map = L.map('map').setView([43.710100, 7.261997], 13);
+
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            
         });
 
         //get personality insights also
         if (twitterhandle != "") {
           $.get('/addUser/'+twitterhandle, function(res) {
             $.get('/matchUser/'+twitterhandle, function(users) {
-                console.log(users);
+                users = users.matches;
+                for (var i=0; i<users.length; i++) {
+                    var html = "<div class='user'><p>@<a target='_blank' href='http://twitter.com/"+users[i].twitterhandle+"'>"+users[i].twitterhandle+"</a></p></div>";
+                    $(".users").append(html);
+                }
             });
           }); 
         }
