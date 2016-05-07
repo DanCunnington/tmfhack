@@ -334,7 +334,8 @@ app.get('/eventbrite/:location', function(req,res,next) {
     
     nbrite.get('/events/search/', { 'venue.city': location }, function (err, data) {
         if(err){
-            return console.error(err);
+            console.error(err);
+            res.json({});
         }
         console.log('Received');
     
