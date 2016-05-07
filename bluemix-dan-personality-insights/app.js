@@ -11,6 +11,7 @@ var http = require('http');
 var https = require('https');
 var bodyParser = require('body-parser');
 var request = require('request');
+var path = require('path');
 
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
@@ -293,3 +294,8 @@ function findIndex(characteristics,name) {
     }
     return -1;
 }
+
+
+app.get('/map', function(req,res,next) {
+    res.sendFile(path.join(__dirname+'/public/map.html'));
+});
