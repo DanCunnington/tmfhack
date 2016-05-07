@@ -220,15 +220,62 @@ app.post('/findEvents', function(req,res,next) {
                 var endTimeMatch = false;
                
                 //Check location
-                var eventCity = eventDetails.characteristics[5].versions[0].value;
-                var locationMatch = (eventCity.toLowerCase() == where.toLowerCase());
+                var locationMatch = true;
+                var index = findIndex(eventDetails.characteristics,"city");
+                if (index != -1) {
+                   var eventCity = eventDetails.characteristics[index].versions[0].value;
+                    locationMatch = (eventCity.toLowerCase() == where.toLowerCase()); 
+                }                
+                
+                //time and date
+                // var datematchOne = false;
+                // var datematchTwo = false;
+                // index = findIndex(eventDetails.characteristics,"starttime");
+                // if (index != -1) {
+                //    var eventStart = eventDetails.characteristics[index].versions[0].value;
+                //    datematchOne = true; 
+                // }
+                
+                // index = findIndex(eventDetails.characteristics, "endtime");
+                // if (index != -1) {
+                //    var eventEnd = eventDetails.characteristics[index].versions[0].value; 
+                //    datematchTwo = true;
+                // }
+                
+                // var startTimeMatch = true;
+                // var endTimeMatch = true;
+                // if (datematchOne && datematchTwo) {
+                //     var startSplit = date_from.split('/');
+                //     var queryStart = startSplit[2]+"-"+startSplit[0]+"-"+startSplit[1]+"T00:00:00.000Z";
+
+                //     startTimeMatch = (Date(eventStart) >= Date(queryStart));
+
+                //     var endSplit = date_till.split('/');
+                //     var queryEnd = endSplit[2]+"-"+endSplit[0]+"-"+endSplit[1]+"T23:59:59.000Z";
+
+                //     endTimeMatch = (Date(eventEnd) <= Date(queryEnd));
+
+                //     console.log("query location");
+                //     console.log(where);
+                //     console.log("Start time of query");
+                //     console.log(queryStart);
+                //     console.log("Start time of event");
+                //     console.log(eventStart);
+                //     console.log("end time of query");
+                //     console.log(queryEnd);
+                //     console.log("end time of event");
+                //     console.log(eventEnd);
+                //     console.log("matches, location, start, end");
+                //     console.log(locationMatch);
+                //     console.log(startTimeMatch);
+                //     console.log(endTimeMatch);
+
+                // }
                 
 
-                
-
-
-                events.push(products[i].versions[0]);
-
+                if (locationMatch /*&& startTimeMatch && endTimeMatch*/) {
+                    events.push(eventDetails);
+                }
             }
 
             res.json(events);
@@ -237,3 +284,12 @@ app.post('/findEvents', function(req,res,next) {
         }
     });
 });
+
+function findIndex(characteristics,name) {
+    for (var i=0; i<characteristics.length; i++) {
+        if (characteristics[i].id == name) {
+            return i;
+        }
+    }
+    return -1;
+}
