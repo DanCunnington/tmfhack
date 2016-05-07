@@ -37,6 +37,14 @@ $(document).ready(function() {
         });
 
         //get personality insights also
+        if (twitterhandle != "") {
+          $.get('/addUser/'+twitterhandle, function(res) {
+            $.get('/matchUser/'+twitterhandle, function(users) {
+                console.log(users);
+            });
+          }); 
+        }
+       
 
     });
 
