@@ -46,7 +46,15 @@
             $( ".datepicker" ).datepicker();
             $('.timepicker').timepicker();
         });
-
+    </script>
+    <!-- fix submit -->
+    <script>
+        function prevSubmit(e,num) {
+            if (e.keyCode == 13) {
+                stepForward(num);
+                return false;
+            }
+        }
     </script>
 </head>
 <body>
@@ -56,7 +64,7 @@
             <div id="step1">
                 <span class="stepTitle">Step 1/3: What do you want to do?</span><br>
                 Enter keywords:<br>
-                <input type="text" name="keywords"> <input type="button" name="step2" value="Next step"  onclick="stepForward(1)">
+                <input type="text" name="keywords" onkeypress="return prevSubmit(event,1)"> <input type="button" name="step2" value="Next step"  onclick="stepForward(1)">
                 <div class="orline">or</div>
                 Let us base suggestions on your Facebook profile:<br>
                 <img src="img/facebook-connect.png" class="button-social" alt="Facebook connect"  onclick="stepForward(1)">
@@ -70,7 +78,7 @@
             <div id="step2" style="display: none">
                 <span class="stepTitle">Step 2/3: What do you want to do?</span><br>
                 Enter you location and maximum radius:<br>
-                <input type="text" name="location">
+                <input type="text" name="location" onkeypress="return prevSubmit(event,2)">
                 <select name="radius">
                     <option value="5">5 km</option>
                     <option value="10">10 km</option>
