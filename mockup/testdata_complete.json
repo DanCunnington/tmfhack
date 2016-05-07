@@ -1,0 +1,2323 @@
+[
+  {
+    "productNumber": "psHappening1",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappening1",
+    "versions": [
+      {
+        "productNumber": "psHappening1",
+        "name": "Free Walking Tour of Nice Old Town 2016",
+        "state": "DEF",
+        "validFor": {
+          "startDateTime": "2016-04-25T21:26:35.000Z"
+        },
+        "baseEntityId": "base_ProductSpecification",
+        "isComposite": false,
+        "specificationType": "ProductSpecification",
+        "sharedIndicator": false,
+        "characteristics": [
+          {
+            "id": "starttime",
+            "versions": [
+              {
+                "id": "starttime",
+                "name": "Startime",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "2016-05-08T11:25:00.000Z",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "2016-05-08T11:25:00.000Z",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "2016-05-08T11:25:00.000Z"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Startime",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "2016-05-08T11:25:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "specificationSubSubtype",
+            "versions": [
+              {
+                "id": "specificationSubSubtype",
+                "name": "Product SubType",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "pscmSystemAttribute",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "App",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "App"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel Package",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel Package"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Community",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Community"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Digital API",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Digital API"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "FAF",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "FAF"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Feature",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Feature"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "International",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "International"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Internet",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Internet"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Security",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Security"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Social Media",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Social Media"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Voice Line",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Voice Line"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Product SubType",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "sequence": 2
+              }
+            ]
+          },
+          {
+            "id": "location",
+            "versions": [
+              {
+                "id": "location",
+                "name": "Location",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Fontaine du Soleil - Place Masséna, 06300 Nice",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Fontaine du Soleil - Place Masséna",
+                    "valueType": "String",
+                    "isDefault": false,
+                    "displayValue": "Fontaine du Soleil - Place Masséna"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": " 06300 Nice",
+                    "valueType": "String",
+                    "isDefault": false,
+                    "displayValue": " 06300 Nice"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Location",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Fontaine du Soleil - Place Masséna, 06300 Nice"
+              }
+            ]
+          },
+          {
+            "id": "instance_state",
+            "versions": [
+              {
+                "id": "instance_state",
+                "name": "Instance State",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "lifeCycle",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "ACTIVE",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "ACTIVE"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MIGRATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MIGRATED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "NEW",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "NEW"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SUSPENDED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SUSPENDED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "TERMINATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "TERMINATED"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Instance State",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "endtime",
+            "versions": [
+              {
+                "id": "endtime",
+                "name": "Endtime",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "2016-05-08T13:30:00.000Z",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "2016-05-08T13:30:00.000Z",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "2016-05-08T13:30:00.000Z"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Endtime",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "2016-05-08T13:30:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "city",
+            "versions": [
+              {
+                "id": "city",
+                "name": "City",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Nice",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Nice",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "Nice"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "City",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Nice"
+              }
+            ]
+          },
+          {
+            "id": "capacity",
+            "versions": [
+              {
+                "id": "capacity",
+                "name": "Capacity",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "30",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "30",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "30"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Capacity",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "30"
+              }
+            ]
+          }
+        ],
+        "translations": [
+          {
+            "fieldname": "name",
+            "translation": [
+              {
+                "text": "Free Walking Tour of Nice Old Town 2016",
+                "language": "en-xx"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "productNumber": "psHappening2",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappening2",
+    "versions": [
+      {
+        "productNumber": "psHappening2",
+        "name": "Swimming Tour Swim the Riviera France",
+        "state": "DEF",
+        "validFor": {
+          "startDateTime": "2016-04-25T21:26:35.000Z"
+        },
+        "baseEntityId": "base_ProductSpecification",
+        "isComposite": false,
+        "specificationType": "ProductSpecification",
+        "sharedIndicator": false,
+        "characteristics": [
+          {
+            "id": "starttime",
+            "versions": [
+              {
+                "id": "starttime",
+                "name": "Startime",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "2016-06-12T14:00:0.000Z",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "2016-06-12T14:00:0.000Z",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "2016-06-12T14:00:0.000Z"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Startime",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "2016-06-12T14:00:0.000Z"
+              }
+            ]
+          },
+          {
+            "id": "specificationSubSubtype",
+            "versions": [
+              {
+                "id": "specificationSubSubtype",
+                "name": "Product SubType",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "pscmSystemAttribute",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "App",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "App"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel Package",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel Package"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Community",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Community"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Digital API",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Digital API"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "FAF",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "FAF"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Feature",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Feature"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "International",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "International"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Internet",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Internet"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Security",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Security"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Social Media",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Social Media"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Voice Line",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Voice Line"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Product SubType",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "sequence": 2
+              }
+            ]
+          },
+          {
+            "id": "location",
+            "versions": [
+              {
+                "id": "location",
+                "name": "Location",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Nice",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Nice",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "Nice"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Location",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Nice"
+              }
+            ]
+          },
+          {
+            "id": "instance_state",
+            "versions": [
+              {
+                "id": "instance_state",
+                "name": "Instance State",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "lifeCycle",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "ACTIVE",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "ACTIVE"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MIGRATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MIGRATED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "NEW",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "NEW"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SUSPENDED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SUSPENDED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "TERMINATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "TERMINATED"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Instance State",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "endtime",
+            "versions": [
+              {
+                "id": "endtime",
+                "name": "Endtime",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "2016-05-08T13:30:00.000Z",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "2016-05-08T13:30:00.000Z",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "2016-05-08T13:30:00.000Z"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Endtime",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "2016-05-08T13:30:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "city",
+            "versions": [
+              {
+                "id": "city",
+                "name": "City",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Nice",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Nice",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "Nice"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "City",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Nice"
+              }
+            ]
+          },
+          {
+            "id": "capacity",
+            "versions": [
+              {
+                "id": "capacity",
+                "name": "Capacity",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "16",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "16",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "16"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Capacity",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "16"
+              }
+            ]
+          }
+        ],
+        "translations": [
+          {
+            "fieldname": "name",
+            "translation": [
+              {
+                "text": "Swimming Tour Swim the Riviera France",
+                "language": "en-xx"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "productNumber": "psHappening3",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappening3",
+    "versions": [
+      {
+        "productNumber": "psHappening3",
+        "name": "Cocktail Lyric",
+        "state": "DEF",
+        "validFor": {
+          "startDateTime": "2016-04-25T21:26:35.000Z"
+        },
+        "baseEntityId": "base_ProductSpecification",
+        "isComposite": false,
+        "specificationType": "ProductSpecification",
+        "sharedIndicator": false,
+        "characteristics": [
+          {
+            "id": "starttime",
+            "versions": [
+              {
+                "id": "starttime",
+                "name": "Startime",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "2016-05-20T19:00:0.000Z",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "2016-05-20T19:00:0.000Z",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "2016-05-20T19:00:0.000Z"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Startime",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "2016-05-20T19:00:0.000Z"
+              }
+            ]
+          },
+          {
+            "id": "specificationSubSubtype",
+            "versions": [
+              {
+                "id": "specificationSubSubtype",
+                "name": "Product SubType",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "pscmSystemAttribute",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "App",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "App"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel Package",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel Package"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Community",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Community"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Digital API",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Digital API"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "FAF",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "FAF"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Feature",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Feature"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "International",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "International"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Internet",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Internet"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Security",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Security"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Social Media",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Social Media"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Voice Line",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Voice Line"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Product SubType",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "sequence": 2
+              }
+            ]
+          },
+          {
+            "id": "location",
+            "versions": [
+              {
+                "id": "location",
+                "name": "Location",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Little Resto - 15, Rue Bonaparte, 06000 Nice",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Little Resto - 15",
+                    "valueType": "String",
+                    "isDefault": false,
+                    "displayValue": "Little Resto - 15"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": " Rue Bonaparte",
+                    "valueType": "String",
+                    "isDefault": false,
+                    "displayValue": " Rue Bonaparte"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": " 06000 Nice",
+                    "valueType": "String",
+                    "isDefault": false,
+                    "displayValue": " 06000 Nice"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Location",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Little Resto - 15, Rue Bonaparte, 06000 Nice"
+              }
+            ]
+          },
+          {
+            "id": "instance_state",
+            "versions": [
+              {
+                "id": "instance_state",
+                "name": "Instance State",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "lifeCycle",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "ACTIVE",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "ACTIVE"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MIGRATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MIGRATED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "NEW",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "NEW"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SUSPENDED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SUSPENDED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "TERMINATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "TERMINATED"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Instance State",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "endtime",
+            "versions": [
+              {
+                "id": "endtime",
+                "name": "Endtime",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "2016-05-20T23:00:0.000Z",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "2016-05-20T23:00:0.000Z",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "2016-05-20T23:00:0.000Z"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Endtime",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "2016-05-20T23:00:0.000Z"
+              }
+            ]
+          },
+          {
+            "id": "city",
+            "versions": [
+              {
+                "id": "city",
+                "name": "City",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Nice",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Nice",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "Nice"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "City",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Nice"
+              }
+            ]
+          },
+          {
+            "id": "capacity",
+            "versions": [
+              {
+                "id": "capacity",
+                "name": "Capacity",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "40",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "40",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "40"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Capacity",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "40"
+              }
+            ]
+          }
+        ],
+        "translations": [
+          {
+            "fieldname": "name",
+            "translation": [
+              {
+                "text": "Cocktail Lyric",
+                "language": "en-xx"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "productNumber": "psHappening4",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappening4",
+    "versions": [
+      {
+        "productNumber": "psHappening4",
+        "name": "Nice OTOM Wrap Party!",
+        "state": "DEF",
+        "validFor": {
+          "startDateTime": "2016-04-25T21:26:35.000Z"
+        },
+        "baseEntityId": "base_ProductSpecification",
+        "isComposite": false,
+        "specificationType": "ProductSpecification",
+        "sharedIndicator": false,
+        "characteristics": [
+          {
+            "id": "starttime",
+            "versions": [
+              {
+                "id": "starttime",
+                "name": "Startime",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "2016-5-15T13:30:0.000Z",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "2016-5-15T13:30:0.000Z",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "2016-5-15T13:30:0.000Z"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Startime",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "2016-5-15T13:30:0.000Z"
+              }
+            ]
+          },
+          {
+            "id": "specificationSubSubtype",
+            "versions": [
+              {
+                "id": "specificationSubSubtype",
+                "name": "Product SubType",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "pscmSystemAttribute",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "App",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "App"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel Package",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel Package"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Community",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Community"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Digital API",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Digital API"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "FAF",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "FAF"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Feature",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Feature"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "International",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "International"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Internet",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Internet"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Security",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Security"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Social Media",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Social Media"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Voice Line",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Voice Line"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Product SubType",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "sequence": 2
+              }
+            ]
+          },
+          {
+            "id": "location",
+            "versions": [
+              {
+                "id": "location",
+                "name": "Location",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Hotel Campanile - 461 Promenade des Anglais, 06200 Nice",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Hotel Campanile - 461 Promenade des Anglais",
+                    "valueType": "String",
+                    "isDefault": false,
+                    "displayValue": "Hotel Campanile - 461 Promenade des Anglais"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": " 06200 Nice",
+                    "valueType": "String",
+                    "isDefault": false,
+                    "displayValue": " 06200 Nice"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Location",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Hotel Campanile - 461 Promenade des Anglais, 06200 Nice"
+              }
+            ]
+          },
+          {
+            "id": "instance_state",
+            "versions": [
+              {
+                "id": "instance_state",
+                "name": "Instance State",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "lifeCycle",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "ACTIVE",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "ACTIVE"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MIGRATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MIGRATED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "NEW",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "NEW"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SUSPENDED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SUSPENDED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "TERMINATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "TERMINATED"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Instance State",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "endtime",
+            "versions": [
+              {
+                "id": "endtime",
+                "name": "Endtime",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "2016-5-15T17:00:0.000Z",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "2016-5-15T17:00:0.000Z",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "2016-5-15T17:00:0.000Z"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Endtime",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "2016-5-15T17:00:0.000Z"
+              }
+            ]
+          },
+          {
+            "id": "city",
+            "versions": [
+              {
+                "id": "city",
+                "name": "City",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Nice",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Nice",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "Nice"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "City",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Nice"
+              }
+            ]
+          },
+          {
+            "id": "capacity",
+            "versions": [
+              {
+                "id": "capacity",
+                "name": "Capacity",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "40",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "40",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "40"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Capacity",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "40"
+              }
+            ]
+          }
+        ],
+        "translations": [
+          {
+            "fieldname": "name",
+            "translation": [
+              {
+                "text": "Nice OTOM Wrap Party!",
+                "language": "en-xx"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "productNumber": "psHappeningTest",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappeningTest",
+    "versions": [
+      {
+        "productNumber": "psHappeningTest",
+        "name": "psHappeningTest",
+        "state": "DEF",
+        "validFor": {
+          "startDateTime": "2016-04-25T21:26:35.000Z"
+        },
+        "baseEntityId": "base_ProductSpecification",
+        "isComposite": false,
+        "specificationType": "ProductSpecification",
+        "sharedIndicator": false,
+        "characteristics": [
+          {
+            "id": "specificationSubSubtype",
+            "versions": [
+              {
+                "id": "specificationSubSubtype",
+                "name": "Product SubType",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "pscmSystemAttribute",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "App",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "App"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Channel Package",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Channel Package"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Community",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Community"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Digital API",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Digital API"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "FAF",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "FAF"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Feature",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Feature"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "International",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "International"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Internet",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Internet"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SMS",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SMS"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Security",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Security"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Social Media",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Social Media"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "Voice Line",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "Voice Line"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Product SubType",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "sequence": 2
+              }
+            ]
+          },
+          {
+            "id": "instance_state",
+            "versions": [
+              {
+                "id": "instance_state",
+                "name": "Instance State",
+                "validFor": {
+                  "startDateTime": "2013-05-10T04:00:00.000Z"
+                },
+                "type": "lifeCycle",
+                "valueType": "Code Table",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "ACTIVE",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "ACTIVE"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "MIGRATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "MIGRATED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "NEW",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "NEW"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "SUSPENDED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "SUSPENDED"
+                  },
+                  {
+                    "validFor": {
+                      "startDateTime": "2013-05-10T04:00:00.000Z"
+                    },
+                    "value": "TERMINATED",
+                    "valueType": "Code Table",
+                    "isDefault": false,
+                    "displayValue": "TERMINATED"
+                  }
+                ],
+                "state": "ACT",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Instance State",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "city",
+            "versions": [
+              {
+                "id": "city",
+                "name": "City",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Nice",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Nice",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "Nice"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "City",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "NULL",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Nice"
+              }
+            ]
+          },
+          {
+            "id": "brand",
+            "versions": [
+              {
+                "id": "brand",
+                "name": "Brand",
+                "validFor": {
+                  "startDateTime": "2016-04-25T21:26:35.000Z"
+                },
+                "value": "Audi",
+                "type": "pscmUserAttribute",
+                "valueType": "String",
+                "characteristicValues": [
+                  {
+                    "validFor": {
+                      "startDateTime": "2016-04-25T21:26:35.000Z"
+                    },
+                    "value": "Audi",
+                    "valueType": "String",
+                    "isDefault": true,
+                    "displayValue": "Audi"
+                  }
+                ],
+                "state": "DEF",
+                "translations": [
+                  {
+                    "fieldname": "name",
+                    "translation": [
+                      {
+                        "text": "Brand",
+                        "language": "en-xx"
+                      }
+                    ]
+                  }
+                ],
+                "properties": [
+                  {
+                    "value": "CONF",
+                    "isSelected": true
+                  }
+                ],
+                "displayValue": "Audi"
+              }
+            ]
+          }
+        ],
+        "translations": [
+          {
+            "fieldname": "name",
+            "translation": [
+              {
+                "text": "psHappeningTest",
+                "language": "en-xx"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

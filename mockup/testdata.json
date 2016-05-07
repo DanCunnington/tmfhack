@@ -1,0 +1,22 @@
+[
+  {
+    "productNumber": "psHappening1",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappening1"
+  },
+  {
+    "productNumber": "psHappening2",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappening2"
+  },
+  {
+    "productNumber": "psHappening3",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappening3"
+  },
+  {
+    "productNumber": "psHappening4",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappening4"
+  },
+  {
+    "productNumber": "psHappeningTest",
+    "href": "/ecm/ecm/CatalogManagement/v2/productSpecification/psHappeningTest"
+  }
+]

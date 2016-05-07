@@ -43,6 +43,14 @@
             $("#step" + curStep).slideDown();
         }
 
+        function toggleTwitter(){
+            if ( $('#twitterHandler').css('display') == 'none' ) {
+                $('#twitterHandler').slideDown();
+            } else {
+                $('#twitterHandler').slideUp();
+            }
+        }
+
         $(function() {
             $( ".datepicker" ).datepicker();
             $('.timepicker').timepicker();
@@ -76,12 +84,16 @@
                 <span class="stepTitle">Step 1/3: What do you want to do?</span><br>
                 Enter keywords:<br>
                 <input type="text" name="keywords" onkeypress="return prevSubmit(event,1)"> <input type="button" name="step2" value="Next step"  onclick="stepForward(1)">
-                <div class="orline">or</div>
+                <!--<div class="orline">or</div>
                 Let us base suggestions on your Facebook profile:<br>
-                <img src="img/facebook-connect.png" class="button-social" alt="Facebook connect"  onclick="stepForward(1)">
+                <img src="img/facebook-connect.png" class="button-social" alt="Facebook connect"  onclick="stepForward(1)">-->
                 <div class="orline">or</div>
                 Let us base suggestions on your Twitter profile:<br>
-                <img src="img/twitter-connect.png" class="button-social" alt="Twitter connect"  onclick="stepForward(1)">
+                <img src="img/twitter-connect.png" class="button-social" id="twitterButton" alt="Twitter connect" onclick="toggleTwitter()">
+                <div id="twitterHandler" style="display: none;">
+                    What's your twitter handle?<br />
+                    <input type="text" name="twitter"><input type="button" name="step2" value="Next step"  onclick="stepForward(1)"><br />
+                </div>
                 <div class="orline">or</div>
                 <input type="button" name="step2" value="I want to see everything!" onclick="stepForward(1)"><br>
 
@@ -101,9 +113,6 @@
                 <br>
                 <input type="button" name="step2" value="Previous step" onclick="stepBack(2)" class="prevStep"><br>
             </div>
-            <div id="twitter">
-            What's your twitter handle?<br />
-            <input type="text" name="twitter"><br />
             <div id="step3" style="display: none">
                 <span class="stepTitle">Step 3/3: From/to when?</span><br>
                 State the date and time from/to which you are looking for activities:<br>
