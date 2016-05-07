@@ -18,7 +18,7 @@ body {
 }
 
 #container{
-    margin: 100px 0 100px 0;
+    margin: 100px 0 50px 0;
 }
 
 h1{
@@ -34,15 +34,49 @@ h2{
 
 /* Input page */
 
+.stepTitle{
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 10px 0;
+    display: block;
+}
+
 #inputform {
     margin: 25px 0 0 0;
 }
 
-#inputform input, #inputform #radiobuttons{
+#inputform input, #inputform #radiobuttons, #inputform select{
     margin: 4px 1px 15px 1px;
     font-size: 17px;
     color: #000000;
     text-align: center;
+    padding: 0 5px;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin-top:-1px;
+    margin-bottom: -1px;
+}
+
+.orline{
+    background-image: url("img/orline.png");
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    margin: 10px 0;
+    color: #000000;
+    font-size: 20px;
+}
+
+.button-social{
+    margin: 5px 0 0 0;
+    cursor: pointer;
+}
+
+.prevStep{
+    font-size: 12px !important;
 }
 
 #inputform #radiobuttons{
