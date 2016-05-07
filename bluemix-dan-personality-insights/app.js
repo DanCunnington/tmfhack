@@ -55,6 +55,7 @@ password: 'sS6GAnNpLDNZ',
 version: 'v2'
 });
 
+var foursquare = (require('foursquarevenues'))('FGM13COQ3FT2QGX14IU0U0SQKMKY3XE11IR31NCF0PVQ4SVR', 'C0ATHFNKGKIWF1L0WFEJXOQ5NOE0E3OGDP1BRIH3GGXFFF3Z');
 
 
 //For the twitter user - use judges
@@ -298,4 +299,29 @@ function findIndex(characteristics,name) {
 
 app.get('/map', function(req,res,next) {
     res.sendFile(path.join(__dirname+'/public/map.html'));
+});
+
+app.get('/restaurants/:lat/:lng', function(req,res,next) {
+    var lat = req.params.lat;
+    var lng = req.params.lng;
+
+    //Make call to Foursquare
+    var params = {
+        "ll": lat+","+lng,
+        "section":"food",
+        "limit":5
+    };
+
+    foursquare.exploreVenues(params, function(error, venues) {
+        if (!error) {
+
+            var restaurants = [];
+            var items = venues.response.groups[0].items;
+            for (var i=0; i<items.length; i++) {
+                restaurants.push({name: items[i].venue.name, lat: items[i].venue.location.lat, lng: items[i].venue.location.lng});
+            }
+            res.json(restaurants);
+        }
+    });
+
 });

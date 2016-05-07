@@ -77,6 +77,26 @@ $(document).ready(function() {
                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
 
+
+            //Plot lat lng of venue on map
+
+
+
+            var RestaurantIcon = L.Icon.Default.extend({
+                options: {
+                    iconUrl: 'marker-icon-restaurant.png' 
+                }
+            });
+            //Ads for nearby restaurants
+            $.get('/restaurants/43.710100/7.261997', function(restaurants) {
+               
+                for (var i=0; i<restaurants.length; i++) {
+                    var restaurantIcon = new RestaurantIcon();
+                    var text = "2 for 1 on all evening meals - "+restaurants[i].name;
+                    L.marker([restaurants[i].lat,restaurants[i].lng],{icon: restaurantIcon}).bindPopup(text).addTo(map);
+                }
+                
+            });
             
         });
 

@@ -9,6 +9,7 @@
     "body-parser": "^1.15.1",
     "cfenv": "1.0.x",
     "express": "4.13.x",
+    "foursquarevenues": "^2.0.0",
     "mongoose": "^4.4.15",
     "request": "^2.72.0",
     "twit": "^2.2.4",
