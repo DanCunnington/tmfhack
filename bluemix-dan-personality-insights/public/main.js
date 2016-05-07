@@ -88,6 +88,7 @@ $(document).ready(function() {
                 }
             });
             //Ads for nearby restaurants
+            //Pass in lat lng of first venue
             $.get('/restaurants/43.710100/7.261997', function(restaurants) {
                
                 for (var i=0; i<restaurants.length; i++) {
