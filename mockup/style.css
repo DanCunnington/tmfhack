@@ -1,0 +1,108 @@
+
+/* Overal styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #555555;
+}
+
+body {
+    background-image: url("img/bg.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: arial;
+}
+
+#container{
+    margin: 100px 0 100px 0;
+}
+
+h1{
+    font-size: 50px;
+    color: #000000;
+}
+
+h2{
+    font-size: 35px;
+    color: #000000;
+
+}
+
+/* Input page */
+
+#inputform {
+    margin: 25px 0 0 0;
+}
+
+#inputform input, #inputform #radiobuttons{
+    margin: 4px 1px 15px 1px;
+    font-size: 17px;
+    color: #000000;
+    text-align: center;
+}
+
+#inputform #radiobuttons{
+    margin: 4px 1px 5px 1px;
+}
+
+.datepicker{
+    width: 100px;
+}
+
+.timepicker{
+    width: 75px;
+}
+
+#submit{
+    padding: 3px 10px;
+}
+
+/* results page */
+
+#results {
+    margin: 25px auto 0 auto;
+    width: 800px;
+    background:rgba(255,255,255,0.5);
+}
+
+.result{
+    border-color: #ffffff;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    text-align: left;
+    clear: both;
+    line-height: 150%;
+}
+
+    .result .spacing{
+        width: 100%;
+        height: 10px;
+        display: block;
+    }
+
+    .result .eventImg{
+        margin: 0 10px 0 10px;
+    }
+
+    .result .title{
+        color: #000000;
+        font-size: 20px;
+    }
+
+    .result .info{
+        float: right;
+        margin: 0 10px 0 0;
+        color: #000000;
+    }
+
+    .result .about{
+        display: block;
+    }
+
+.last{
+    border: none;
+}
